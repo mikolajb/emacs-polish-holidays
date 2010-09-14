@@ -1,0 +1,11 @@
+#+TITLE: polish holidays for emacs calendar
+#+AUTHOR: Mikołaj Baranowski
+
+* Setup
+  just add
+  : (load "/path/to/file/polish-holidays.el")
+  into your =.emacs= file
+
+  for more, plese look into file [[http://github.com/mikolajb/emacs-configuration/blob/master/modes.el][=modes.el=]] from my emacs configuration
+
+
