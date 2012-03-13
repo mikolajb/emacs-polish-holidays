@@ -1,19 +1,10 @@
-(eval-when-compile
-  (require 'calendar)
-  (require 'holidays))
-
-(european-calendar)
-
 (setq calendar-week-start-day 1
       calendar-day-name-array ["niedziela" "poniedziałek" "wtorek" "środa" "czwartek" "piątek" "sobota"]
       calendar-month-name-array ["styczeń" "luty" "marzec" "kwiecięń" "maj" "czerwiec" "lipiec" "sierpień" "wrzesień" "październik" "listopad" "grudzień"])
 
-;; (defvar holiday-polish-holidays "Polski kalendarz")
-
-;; (setq swieta-panstwowe-wolne-od-pracy
-;;       `((holiday-fixed 5 1 "1 maja")
-;; 	(holiday-fixed 5 3 "Święto Narodowe Trzeciego Maja")
-;; 	(holiday-fixed 11 11 "Narodowe Święto Niepodległości")))
+(setq czas-letni
+      `((holiday-float 3 0 -1 "Zmiana czasu na letni 1h do przodu")
+	(holiday-float 10 0 -1 "Zmiana czasu na zimowy 1h do tyłu")))
 
 (setq swieta-panstwowe-pozostałe-święta
       `((holiday-fixed 2 8 "Święto Służby Więziennej")
@@ -46,7 +37,6 @@
 	(holiday-fixed 11 11 "Narodowe Święto Niepodległości")
 	(holiday-fixed 12 25 "pierwszy dzień Bożego Narodzenia")
 	(holiday-fixed 12 26 "drugi dzień Bożego Narodzenia")))
-
 
 (setq swieta-katolickie
       `((holiday-fixed 1 1 "Światowy Dzień Pokoju (od 1967); Bożej Rodzicielki Maryi")
@@ -117,5 +107,3 @@
 	(holiday-fixed 12 26 "Dzień św. Szczepana, Pierwszego Męczennika")
 	(holiday-fixed 12 27 "Dzień św. Jana Apostoła i Ewangelisty")
 	(holiday-fixed 12 28 "Dzień Świętych Młodzianków, Dzień Niewinnych Dzieci Betlejemskich")))
-
-(setq calendar-holidays (append swieta-panstwowe-pozostałe-święta ustawowo-wolne-od-pracy))
