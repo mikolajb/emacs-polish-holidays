@@ -1,7 +1,3 @@
-(setq calendar-week-start-day 1
-      calendar-day-name-array ["niedziela" "poniedziałek" "wtorek" "środa" "czwartek" "piątek" "sobota"]
-      calendar-month-name-array ["styczeń" "luty" "marzec" "kwiecięń" "maj" "czerwiec" "lipiec" "sierpień" "wrzesień" "październik" "listopad" "grudzień"])
-
 (setq czas-letni
       `((holiday-float 3 0 -1 "Zmiana czasu na letni 1h do przodu")
 	(holiday-float 10 0 -1 "Zmiana czasu na zimowy 1h do tyłu")))
@@ -107,3 +103,5 @@
 	(holiday-fixed 12 26 "Dzień św. Szczepana, Pierwszego Męczennika")
 	(holiday-fixed 12 27 "Dzień św. Jana Apostoła i Ewangelisty")
 	(holiday-fixed 12 28 "Dzień Świętych Młodzianków, Dzień Niewinnych Dzieci Betlejemskich")))
+
+(provide 'polish-holidays)
